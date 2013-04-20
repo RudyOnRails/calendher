@@ -1,5 +1,5 @@
 Calendher::Application.routes.draw do
-  root :to => "home#index"
+  root :to => "pages#home"
   resources :events
 
   match 'auth/:provider/callback', to: 'sessions#create'
