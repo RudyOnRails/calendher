@@ -4,6 +4,11 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
 
+    if !user_signed_in?
+      redirect_to home_path
+      return
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }

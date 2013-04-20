@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :name, :oauth_expires_at, :oauth_token, :provider, :uid
 
+
+  after_save :prepopulate_holidays
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
@@ -19,4 +22,9 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+
+  def prepopulate_holidays
+    
+  end
+
 end

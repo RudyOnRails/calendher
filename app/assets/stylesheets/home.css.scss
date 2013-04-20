@@ -3,15 +3,27 @@ $helvetica_neue:"HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helve
 
 
 #HomeContent{
-	background: url(wood1.png) top left repeat;
-	min-height: 500px;
+	background: url(bg_1.png) top left repeat;
+	height: 250px;
+	padding-top:30px;
+}
+
+#HomeDescription{
+	background: #f1ebe8;
 	padding-top:30px;
 }
 
 #content_home{
 	padding:10px;
-	background-color:#f1ebe8;
 }
+
+.btn-danger{
+	background:#e35c4e;
+}
+.btn-danger a{
+	color:white;
+}
+	.btn-danger a:visited{color:white;}
 
 .home_head_text{
 	font-family: $helvetica_neue;
@@ -31,4 +43,15 @@ p.home_sub_text{
 	color:#333;
 	height:23px;
 	vertical-align: center;
+}
+
+#SignUpBox{
+	height:50px;
+	background:#FFF;
+	border-top:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.huge_signup_btn{
+	height:35px;
+	font-size:30px;
 }

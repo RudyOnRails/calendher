@@ -1,18 +1,41 @@
-<h2>Sign up</h2>
+<header class="navbar navbar-fixed-top">
+  <nav class="navbar-inner">
+    <div class="container margintop-10">
+      <div class="logo span10">
+        <%= image_tag "logo.png", :width => "100" %>
+      </div>
+      <div class="span1">
+        <a>Account</a>
+      </div>
+  </nav>
+</header>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="content">
+	<div class="container">
+		<div class="row">
+			<div class="span10 offset1">
+				<h2>Sign up</h2>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+				  <%= devise_error_messages! %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+				  <div><%= f.label :email %>
+				  <%= f.email_field :email, :autofocus => true %></div>
+				  <br />
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+				  <div><%= f.label :password %>
+				  <%= f.password_field :password %></div>
+				  <br />
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+				  <div><%= f.label :password_confirmation %>
+				  <%= f.password_field :password_confirmation %></div>
+				  <br />
 
-<%= render "devise/shared/links" %>
+				  <div><%= f.submit "Sign up" %></div>
+				<% end %>
+
+				<%= render "devise/shared/links" %>
+			</div>
+		</div>
+	</div>
+</div>
