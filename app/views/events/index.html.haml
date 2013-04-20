@@ -1,19 +1,30 @@
-%h1 Listing events
+%header.navbar.navbar-fixed-top
+  %nav.navbar-inner
+    .container.margintop-10
+      %div.logo.span10 
+        %span.logo CalendHer
+      %div.span1
+        %a Account
 
-%table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
+.content
+  .container
 
-  - @events.each do |event|
-    %tr
-      %td= event.name
-      %td= link_to 'Show', event
-      %td= link_to 'Edit', edit_event_path(event)
-      %td= link_to 'Destroy', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    %div.row.offset
+      %div.span12
+        %div.row
+          %div.span10.offset1
+            %h1 Special Occasions
+            = link_to 'Add another event', new_event_path, :class => "btn"
 
-%br
+        - @events.each do |event|
+          %div.row.event_table
+            %div.span1.offset1.date DATE
+            %div.span1 
+              =image_tag "sample_img.jpg", :class => "pic"
+            %div.span3= event.name
+            %div.span1= link_to 'Edit', edit_event_path(event)
+            %div.span1= link_to 'Delete', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-= link_to 'New Event', new_event_path
+    %br
+
+

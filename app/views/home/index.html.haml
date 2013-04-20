@@ -1,0 +1,14 @@
+#HomeContent
+  .container
+    %div.row
+      %div.span10.offset1.centered#content_home
+        %p.lead Be the Guy that Women Love
+
+    #user_nav
+      - if current_user
+        Signed in as
+        = succeed "!" do
+          %strong= current_user.name
+        = link_to "Sign out", signout_path, id: "sign_out"
+      - else
+      = link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in"
