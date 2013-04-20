@@ -4,6 +4,7 @@
       %div.span10.offset1.centered#content_home
         %p.home_head_text Stress-Free Gifts for Her
         %p.home_sub_text The Older Sis You Never Had
+        =image_tag "logo.png", :width => 500
 
     %div.row.margintop-10
       %div.span5.offset1
@@ -16,8 +17,12 @@
 
     %div.row.margintop-10
       %div.span10.offset1.centered
-        %input.input-xxlarge.signup_field{:placeholder => "Search"}
-        %input{ :class => "btn", :type => "submit", :name => "submit", :value => "DO IT" }
+        = link_to 'Sign up for reminders here', new_user_registration_url, :class => "btn"
+
+
+
+        / %input.input-xxlarge.signup_field{:placeholder => "Search"}
+        / %input{ :class => "btn", :type => "submit", :name => "submit", :value => "DO IT" }
 
     / #user_nav
     /   - if current_user
