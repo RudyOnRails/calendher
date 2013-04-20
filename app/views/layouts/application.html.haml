@@ -6,4 +6,19 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    = current_user
+    %header.navbar.navbar-fixed-top
+      %nav.navbar-inner
+        .container.margintop-10
+          %div.logo.span10 
+            =image_tag "logo.png", :width => "100"
+          %div.span1
+            -if user_signed_in?
+              =link_to "sign out", destroy_user_session_path, :method => :delete
+              %a Account
+            - else
+              =link_to "sign in", new_user_session_path
+
+
+    
     = yield
