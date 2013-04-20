@@ -1,4 +1,7 @@
 Calendher::Application.routes.draw do
+  resources :holidays
+
+
   devise_for :users
 
   root :to => "pages#home"

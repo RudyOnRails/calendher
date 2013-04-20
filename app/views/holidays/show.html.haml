@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @holiday.name
+
+= link_to 'Edit', edit_holiday_path(@holiday)
+\|
+= link_to 'Back', holidays_path
