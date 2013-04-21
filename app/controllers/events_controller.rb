@@ -10,7 +10,7 @@ class EventsController < ApplicationController
     end
 
     @user = current_user
-    @events = @user.events if @user.events.count > 0
+    @events = current_user.events
 
     respond_to do |format|
       format.html # index.html.erb
@@ -48,7 +48,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(params[:event])
+    @event = current_user.events.build(params[:event])
 
     respond_to do |format|
       if @event.save

@@ -1,11 +1,14 @@
 %div.row
-	%div.span10.offset1
-		%p#notice= notice
+  %div.span10.offset1
+    %p#notice= notice
 
-		%p
-			%b Name:
-			= @event.name
+    %p
+      %b Name:
+      =@event.name
+    %p 
+      %b Date:
+      =@event.date.strftime("%B #{@event.date.day.ordinalize}")
 
-		= link_to 'Edit', edit_event_path(@event)
-		\|
-		= link_to 'Back', events_path
+    =link_to 'Edit', edit_event_path(@event)
+    \|
+    = link_to 'Back', events_path
