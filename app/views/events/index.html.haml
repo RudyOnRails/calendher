@@ -4,8 +4,9 @@
   %div.span12
     %div.row
       %div.span10.offset1
-        %h1 My Occasions
-        = link_to 'Add another event', new_event_path, :class => "btn"
+        %h1 My Occasions #{link_to 'Add another event', new_event_path, :class => "btn"}
+  
+        %h5 You will receive an email remindher 2 weeks prior to an event.
 
     - @events.each do |event|
       - if event.name == "Mother's Day"
