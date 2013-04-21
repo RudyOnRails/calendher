@@ -10,7 +10,7 @@ class EventsController < ApplicationController
     end
 
     @user = current_user
-    @events = @user.events if @user.events.count > 0
+    @events = current_user.events
 
     respond_to do |format|
       format.html # index.html.erb
