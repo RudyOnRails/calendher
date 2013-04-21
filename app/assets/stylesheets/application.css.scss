@@ -19,18 +19,18 @@ $helvetica_neue:"HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helve
 .white{color:white;}
 .dark{color:#333;}
 .weighted{font-weight:bold;}
-
+.right{float:right;}
+.clear{clear:both;}
 
 .content {
   background-color: #F4F4F4;
-  padding-top:60px;
+  padding:60px 20px;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
-  padding-bottom:60px;
 }
 
 .logo{
@@ -38,6 +38,10 @@ $helvetica_neue:"HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helve
 	font-family: $helvetica_medium;
 }
 
-.margintop-10{
-	margin-top:10px;
+.margintop-10{margin-top:10px;}
+.marginleft-20{margin-left:20px;}
+.margintop-10{margin-top:7px;}
+
+.nav-spacing{
+	margin-right:20px;
 }

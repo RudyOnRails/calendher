@@ -2,12 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+$helvetica_medium: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+
+$helvetica_neue:"HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+
+$helvetica_light: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
+
 .event_table{
 	margin-top:10px;
+	padding:15px;
+
 }
 
 .event_table .pic{
 	-webkit-border-radius: 500px;
 	-moz-border-radius: 500px;
 	border-radius: 500px;
+}
+
+.event_table .date{
+	font-size:24px;
+	line-height:1.2;
+	font-family: $helvetica_light;
+	font-weight:300;
+}
+
+.event_table .event_name{
+	font-size:30px;
+	font-family:$helvetica_medium;
+	margin-top:15px;
+}
+
+.event_table .event_options{
+	margin-top:25px;
+}
+.event_table .event_remove{
+	margin-top:25px;	
 }

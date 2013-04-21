@@ -2,12 +2,15 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+
 
     if !user_signed_in?
       redirect_to home_path
       return
     end
+
+    @user = current_user
+    @events = @user.events if @user.events.count > 0
 
     respond_to do |format|
       format.html # index.html.erb

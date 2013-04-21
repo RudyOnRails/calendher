@@ -20,12 +20,14 @@ pre {
 
 a {
   cursor: pointer;
+  color: #f2a859;
 }
 
 div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
+  line-height:1.2;
 }
 
 #notice {

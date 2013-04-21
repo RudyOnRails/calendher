@@ -11,9 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420211156) do
+ActiveRecord::Schema.define(:version => 20130421005612) do
 
   create_table "events", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.text     "description"
+    t.datetime "date"
+    t.integer  "user_id"
+    t.integer  "recipient_id"
+  end
+
+  create_table "recipients", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -37,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20130420211156) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
