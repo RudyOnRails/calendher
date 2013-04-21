@@ -7,7 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3', :group => :development
 
-gem 'pg'
+gem 'pg', :group => :production
 
 
 # Gems used only for assets and not required
@@ -46,3 +46,5 @@ gem 'omniauth-facebook'
 gem 'haml-rails'
 
 gem 'bootstrap-datepicker-rails'
+
+gem "thin"
