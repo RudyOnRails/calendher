@@ -42,3 +42,5 @@ gem 'devise'
 
 gem 'omniauth-facebook'
 gem 'haml-rails'
+
+gem 'bootstrap-datepicker-rails'
