@@ -1,31 +1,68 @@
-#HomeContent
-  .container
-    %div.row
-      %div.span10.offset1.centered#content_home
-        =image_tag "logo.png", :width => 500
-        %p.lead.dark.margintop-10 Stress Free Gift-Giving for Guys
-        = link_to 'Get The Reminders!', new_user_registration_url, :class => "btn btn-large btn-danger"
-        %br
-        =link_to "login", new_user_session_path
 
-#SignUpBox
+
+#HomeContent
+  #SignUpBoxTop.centered.transparent
+    %span.opaque Don't know when Mother's Day is? We got your back.
+    .container
+      .row
+        .span8.offset2
+          %p.sub1 Our experts hand select the top products for the women in your life and send you an email with gift recommendations.
+
   .container
-    %div.row.centered
-      .span4 Thoughtful
-      .span4 Convenient
-      .span4 Timely
+    
+    %div.row
+
+      %div.span10.offset1#content_home
+        / =image_tag "logo.png", :width => 500
+        
+
+        =form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class => "home_new_user") do |f|
+          %fieldset.centered.new_user_home
+            
+            %br
+            = devise_error_messages!
+
+            %p.tagline Never Forget Another Special Day
+            = f.email_field :email, :class => "span5 signup_field nomargin", :placeholder => "email"
+            %br
+            = f.submit "Sign up", :class => "btn btn-danger"
+            \ or
+            =link_to "login", new_user_session_path, :class => ""
+
+    / #SignUpBox.centered.transparent
+    /   %span.sub2 We’re like the older sister you never had.
+
 
 #HomeDescription
   .container
-    %div.row.margintop-10
-      %div.span5.offset1
-        =image_tag "sample_home.jpg", :width => 300
-      %div.span5
-        %ul.lead  
-          %li Thoughtful
-          %li Convenient
-          %li Awesome
+    %div.row.benefit
+      %div.span5.offset1.centered
+        =image_tag "heart_icon.png", :width => 200
+      %div.span5.centered
+        %p.home_title Thoughtful
+        %p.home_subtext We curate your options down to four of the best gifts, and give you a detailed explanation of why each of our recommendations would be special to your mom or sweetheart.
 
+    %div.row.benefit
+      %div.span5.offset1.centered
+        %p.home_title Convenient
+        %p.home_subtext Forget about running around in packed stores looking for something at the last second.  All you have to do is pick from one of our curated options and we'll take you directly to checkout.
+      %div.span5.centered
+        =image_tag "pointer_icon.png", :width => 200
+        
+    %div.row.benefit
+      %div.span5.offset1.centered
+        =image_tag "mail_icon.png", :width => 200
+      %div.span5.centered
+        %p.home_title Timely
+        %p.home_subtext Rush delivery is for chumps! We'll ship your order so it arrives on your perfect day, and you'll never have to pay a $25 overnight fee again.  We'll even remind you when it arrives.
+
+    %div.row.benefit
+      %div.span10.offset1.centered
+        .btn.btn-large.btn-danger#HomeBottomBtn Never Forget Another Special Day
+
+    %div.row.benefit
+      %div.span10.offset1.centered#custom-tweet-button
+        %p.tagline #NoMomLeftBehind
 
 
 

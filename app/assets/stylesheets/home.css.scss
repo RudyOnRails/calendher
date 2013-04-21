@@ -1,11 +1,16 @@
 $helvetica_medium: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 $helvetica_neue:"HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 
+$helvetica_light: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
 
 #HomeContent{
-	background: url(bg_1.png) top left repeat;
-	height: 250px;
-	padding-top:30px;
+	background: url(large_banner.jpg) no-repeat #c3c4c6;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #HomeDescription{
@@ -39,19 +44,87 @@ p.home_sub_text{
 	margin-top:25px;
 }
 
-.signup_field{
+input.signup_field{
 	color:#333;
-	height:23px;
+	height:24px;
 	vertical-align: center;
+	margin-top:7px;
+}
+
+div.row.benefit{
+  margin-top:30px;
+  margin-bottom:100px;
+}
+p.home_title, a.home_title{
+  font: 32px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color:#454745;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #d4cfcd;
+}
+
+p.home_subtext{
+  font: 20px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  line-height:1.4;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.new_user_home{
+	margin-top: 170px;
+}
+
+.tagline{
+  font: 24px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+   -webkit-text-stroke: 1px black;
+   color: #fff;
+   text-shadow:
+       1px 1px 0 #e35c4e,
+     -1px -1px 0 #e35c4e,  
+      1px -1px 0 #e35c4e,
+      -1px 1px 0 #e35c4e,
+       1px 1px 0 #e35c4e;
+  letter-spacing: 1px;
 }
 
 #SignUpBox{
-	height:50px;
-	background:#FFF;
+  background: #fff;
 	border-top:1px solid #ddd;
 	border-bottom: 1px solid #ddd;
+  font-size:18px;
+  padding:15px;
+  font-family:$helvetica_medium;
+  line-height:1.5;
+}
+#SignUpBoxTop{
+  background: #e35c4e;
+  padding:15px 0px;
+  width:100%;
+
+  font: 28px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color:#fff;
+  letter-spacing: 1px;
+
+  -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
 }
 .huge_signup_btn{
 	height:35px;
 	font-size:30px;
+}
+.home_box{
+  border:1px solid #333;
+}
+.sub1{
+  font-size:12px;
+  line-height:1.5;
+  font-weight:700;
+}
+.sub2{
+  font-weight:200;
+  font-size:18px;
 }

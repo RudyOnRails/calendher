@@ -14,6 +14,8 @@
 
 $helvetica_medium: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 $helvetica_neue:"HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+$helvetica_light: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$helvetica_heavy: "HelveticaNeue-Heavy", "Helvetica Neue Heavy", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 .centered{text-align: center;}
 .white{color:white;}
@@ -21,6 +23,7 @@ $helvetica_neue:"HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helve
 .weighted{font-weight:bold;}
 .right{float:right;}
 .clear{clear:both;}
+.nomargin{margin:0px;}
 
 .content {
   background-color: #F4F4F4;
@@ -32,6 +35,23 @@ $helvetica_neue:"HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helve
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
+.sub_header{
+	font-size:28px;
+	font-family: $helvetica_heavy;
+	font-weight:800;
+	margin-top:15px;
+}
+
+fieldset{
+
+}
+
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+
 
 .logo{
 	font-size:20px;

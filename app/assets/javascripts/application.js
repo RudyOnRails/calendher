@@ -15,3 +15,13 @@
 //= require bootstrap
 //= require_tree .
 
+$(document).ready(function(){
+
+	$('#HomeBottomBtn').mouseup(function() {
+		$('#user_email').focus();
+		scroll(0, 0);
+	});
+
+});
+
+
