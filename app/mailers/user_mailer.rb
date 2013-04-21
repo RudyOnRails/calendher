@@ -1,5 +1,4 @@
 class UserMailer < ActionMailer::Base
-  default from: "Calendher"
 
   def welcome_email(user)
     @user = user
