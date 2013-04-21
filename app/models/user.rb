@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
 
+  after_create :send_welcome_email
+
   has_many :events
 
   devise :database_authenticatable, :registerable,
@@ -39,5 +41,11 @@ class User < ActiveRecord::Base
     Event.add_holiday(self.id, nil, "Mother's Day", nil, "2013-05-12")
     Event.add_holiday(self.id, nil, "Valentine's Day", nil, "2013-02-14")
   end
+
+  private
+
+    def send_welcome_email
+      UserMailer.welcome_email(self).deliver
+    end
 
 end
